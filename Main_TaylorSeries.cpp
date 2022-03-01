@@ -59,9 +59,9 @@ void TaylorCos(int n_i, double angle){
         den = factorial( (2*n));
         cos += num/den;
 
-        cout << "num: " << num << endl;
-        cout << "den: " << den << endl;
-        cout << "sin: " << cos << endl;
+        //cout << "num: " << num << endl;
+        //cout << "den: " << den << endl;
+        //cout << "sin: " << cos << endl;
     }
     cout << "Total Cos: "<< cos << endl;
     error= fabs(cos -std::cos(angle)); 
@@ -73,8 +73,6 @@ void TaylorCos(int n_i, double angle){
 
 int main(int argc, char const *argv[])
 {
-    
-
     long long n_i = 3;  //number of iterations
     double angle = 30;
     
@@ -91,22 +89,12 @@ int main(int argc, char const *argv[])
     cout << "Execution time: " << time_sin << endl;
     
 
-    //t_cos_0 = clock();    // start cos clock
+    t_cos_0 = clock();    // start cos clock
     cout << "--COS--" << endl;
     TaylorCos(n_i, angle);
-    //SerieTaylorCoseno(n_i, 30);
-    //t_cos_1 = clock();    // end sin clock
-    //double time_cos = (double(t_cos_1-t_cos_0)/CLOCKS_PER_SEC);
-    //cout << "Execution time: " << time_cos << endl;
-        
-        
-    
-    
-    //cout << "Sin: " << sin << endl;
-    //cout << "Cos: " << cos << endl;
+    t_cos_1 = clock();    // end sin clock
+    double time_cos = (double(t_cos_1-t_cos_0)/CLOCKS_PER_SEC);
+    cout << "Execution time: " << time_cos << endl;
 
-    //t1 = clock();   // end clock
-    //double time = (double(t1-t0)/CLOCKS_PER_SEC);
-    //cout << "Execution time: " << time << endl;
     return 0;
 }
