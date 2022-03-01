@@ -20,9 +20,10 @@ unsigned t_sin_0, t_sin_1;  // Sin clock
 unsigned t_cos_0, t_cos_1;  // Cos clock
 
 int factorial(int n){
-    if (n == 1)
+    if (n == 1 || n == 0)
         return 1;
-    return n*factorial(n-1);
+    else
+        return n*factorial(n-1);
 }
 
 void TaylorSin( int n_i, double angle){
