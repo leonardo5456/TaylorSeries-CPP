@@ -19,8 +19,8 @@ unsigned t0, t1;
 
 int main(int argc, char const *argv[])
 {
-    t0 = clock();    
-    //CODE
+    t0 = clock();    // start clock
+
     int n = 5;  //number of iterations
     double angle = 30;
     double sin = 0;
@@ -30,11 +30,11 @@ int main(int argc, char const *argv[])
     angle = (angle * M_PI )/180;
     cout << angle << endl;
 
-    
 
 
 
-    t1 = clock();
+
+    t1 = clock();   // end clock
     double time = (double(t1-t0)/CLOCKS_PER_SEC);
     cout << "Execution time: " << time << endl;
     return 0;
