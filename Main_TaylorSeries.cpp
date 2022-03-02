@@ -76,7 +76,6 @@ int main(int argc, char const *argv[])
     long long n_i = 3;  //number of iterations
     double angle = 30;
     
-
     // Convert angle to rad
     angle = (angle * M_PI )/180;
     cout << angle << endl;
